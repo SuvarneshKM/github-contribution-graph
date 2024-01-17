@@ -36,11 +36,11 @@ const player: React.CSSProperties = {
 };
 
 const Home: NextPage = () => {
-  const [text, setText] = useState<string>(defaultMyCompProps.title);
+  const [text, setText] = useState<string>(defaultMyCompProps.username);
 
   const inputProps: z.infer<typeof CompositionProps> = useMemo(() => {
     return {
-      title: text,
+      username: text,
     };
   }, [text]);
 
@@ -66,11 +66,6 @@ const Home: NextPage = () => {
           setText={setText}
           inputProps={inputProps}
         ></RenderControls>
-        <Spacing></Spacing>
-        <Spacing></Spacing>
-        <Spacing></Spacing>
-        <Spacing></Spacing>
-        <Tips></Tips>
       </div>
     </div>
   );
